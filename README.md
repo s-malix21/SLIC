@@ -33,15 +33,16 @@ We introduce **TempNet**, a lightweight neural network that learns client-adapti
 
 ### Performance Across Heterogeneity Settings
 
-| **Algorithm** | **CIFAR-10 (α=0.5)** |        | **CIFAR-100 (α=0.5)** |        | **PACS (Feature Skew)** |        |
-|---------------|----------------------|--------|-----------------------|--------|-------------------------|--------|
-|               | Base   | +Temp | Δ%    | Base   | +Temp | Δ%    | Base   | +Temp | Δ%     |
-| **FedAvg**    | 0.5410 | 0.5628 | **+2.18** | 0.2478 | 0.2654 | **+1.76** | 0.4189 | 0.3950 | -2.39  |
-| **FedSAM**    | 0.5677 | 0.5913 | **+2.36** | 0.2653 | 0.2807 | **+1.54** | 0.4472 | 0.4591 | **+1.19** |
-| **FedLESAM**  | 0.5733 | 0.5798 | **+0.65** | 0.2555 | 0.2757 | **+2.02** | 0.3991 | 0.4770 | **+7.79** |
-| **FedSMOO**   | 0.6288 | 0.6245 | -0.43  | 0.2985 | 0.2987 | +0.02  | 0.3917 | 0.4520 | **+6.03** |
-| **FedGMT**    | 0.5610 | 0.5259 | -3.51  | 0.2647 | 0.2614 | -0.33  | 0.3515 | 0.4581 | **+10.66** |
-| **FedProx**   | 0.5450 | 0.5678 | **+2.28** | 0.2520 | 0.2706 | **+1.86** | 0.3780 | 0.4177 | **+3.97** |
+
+| Algorithm | CIFAR-10 Base | CIFAR-10 +Temp | CIFAR-10 Δ% | CIFAR-100 Base | CIFAR-100 +Temp | CIFAR-100 Δ% | PACS Base | PACS +Temp | PACS Δ% |
+|----------|---------------|----------------|-------------|---------------|-----------------|--------------|-----------|------------|----------|
+| FedAvg | 0.5410 | 0.5628 | <span style="color:green;">+2.18</span> | 0.2478 | 0.2654 | <span style="color:green;">+1.76</span> | 0.4189 | 0.3950 | <span style="color:red;">−2.39</span> |
+| FedSAM | 0.5677 | 0.5913 | <span style="color:green;">+2.36</span> | 0.2653 | 0.2807 | <span style="color:green;">+1.54</span> | 0.4472 | 0.4591 | <span style="color:green;">+1.19</span> |
+| FedLESAM | 0.5733 | 0.5798 | <span style="color:green;">+0.65</span> | 0.2555 | 0.2757 | <span style="color:green;">+2.02</span> | 0.3991 | 0.4770 | <span style="color:green;">+7.79</span> |
+| FedSMOO | 0.6288 | 0.6245 | <span style="color:red;">−0.43</span> | 0.2985 | 0.2987 | <span style="color:green;">+0.02</span> | 0.3917 | 0.4520 | <span style="color:green;">+6.03</span> |
+| FedGMT | 0.5610 | 0.5259 | <span style="color:red;">−3.51</span> | 0.2647 | 0.2614 | <span style="color:red;">−0.33</span> | 0.3515 | 0.4581 | <span style="color:green;">+10.66</span> |
+| FedProx | 0.5450 | 0.5678 | <span style="color:green;">+2.28</span> | 0.2520 | 0.2706 | <span style="color:green;">+1.86</span> | 0.3780 | 0.4177 | <span style="color:green;">+3.97</span> |
+
 
 *CIFAR-10/100 use Dirichlet label skew (α=0.5); PACS exhibits feature skew with Sketch as target domain.*
 
